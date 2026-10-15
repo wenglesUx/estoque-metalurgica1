@@ -1,0 +1,1 @@
+ALTER TABLE `materiais` MODIFY COLUMN `peso_linear` varchar(50) NOT NULL;

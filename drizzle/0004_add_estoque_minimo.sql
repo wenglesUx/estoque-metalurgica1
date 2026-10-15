@@ -1,0 +1,1 @@
+ALTER TABLE `materiais` ADD COLUMN `estoque_minimo` DECIMAL(10, 2) NOT NULL DEFAULT 50.00;

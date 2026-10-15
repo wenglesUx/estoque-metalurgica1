@@ -1,0 +1,65 @@
+.hcm-dev-credit {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9998; /* abaixo do balão de notificações (9999) */
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(24, 35, 50, 0.94);
+  color: #e7ebf0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(24, 35, 50, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(8px) scale(0.96);
+  transition: opacity 260ms ease, transform 260ms ease, bottom 260ms ease;
+}
+
+/* Balão de notificações ativo: emerge de cima dele em vez do canto vazio */
+.hcm-dev-credit[data-anchored="true"] {
+  bottom: 88px;
+}
+
+.hcm-dev-credit[data-phase="in"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.hcm-dev-credit[data-phase="out"] {
+  opacity: 0;
+  transform: translateY(4px) scale(0.98);
+}
+
+.hcm-dev-credit__dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 999px;
+  background: #d6a21b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hcm-dev-credit {
+    transition: opacity 120ms ease;
+  }
+}
+
+@media (max-width: 640px) {
+  .hcm-dev-credit {
+    right: 16px;
+    bottom: 16px;
+    font-size: 10px;
+  }
+
+  .hcm-dev-credit[data-anchored="true"] {
+    bottom: 80px;
+  }
+}

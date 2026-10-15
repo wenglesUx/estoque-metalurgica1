@@ -1,0 +1,7 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "deploy": {
+    "aptPackages": ["python3-pip", "libreoffice-calc"],
+    "startCommand": "python3 -m pip install --break-system-packages --quiet openpyxl pdfplumber && NODE_ENV=production node dist/index.js"
+  }
+}

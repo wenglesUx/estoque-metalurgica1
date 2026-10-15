@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1777764365933,
+      "tag": "0000_dear_boomer",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1777764616036,
+      "tag": "0001_natural_puppet_master",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1777764913223,
+      "tag": "0002_slim_starfox",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1777765157173,
+      "tag": "0003_good_eternals",
+      "breakpoints": true
+    }
+  ]
+}
